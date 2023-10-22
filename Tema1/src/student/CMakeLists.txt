@@ -1,0 +1,1 @@
+add_library(student_lib STATIC student.cxx)
