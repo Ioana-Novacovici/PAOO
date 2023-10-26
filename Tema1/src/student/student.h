@@ -4,14 +4,16 @@
 
 class Student {
 private:
-    int SIN;
-    std::string nume;
-    std::string prenume;
-    int anStudiu;
+    int studentID;
+    char* firstName;
+    char* lastName;
+    int yearOfStudy;
 
 public:
-    Student(int sin, const std::string& nume, const std::string& prenume, int anStudiu);
+    Student(int studentID, const char* firstName, const char* lastName, int yearOfStudy);
     ~Student();
     Student(const Student& student);
     std::string toString();
+    void setYearOfStudy(int year);
+    void setName(const char* name);
 };
