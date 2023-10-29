@@ -2,6 +2,8 @@
 #include <cstring>
 #include <iostream>
  
+enum Faculty{};
+
 Student::Student()
 : studentID(-1), yearOfStudy(-1), firstName(nullptr), lastName(nullptr){
     std::cout << "Default constructor called!" << std::endl;

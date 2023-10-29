@@ -10,6 +10,7 @@ private:
     int yearOfStudy;
 
 public:
+
     Student(int studentID, const char* firstName, const char* lastName, int yearOfStudy);
     
     Student();

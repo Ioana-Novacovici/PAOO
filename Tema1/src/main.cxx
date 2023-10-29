@@ -18,9 +18,9 @@ int main(int argc, char* argv[]){
   s3 = new Student(12490, "Andrei", "Marinescu", 1);
   std::cout << s3->toString();
 
-  Student s4(std::move(s1));
+  Student movedStudent(std::move(s1));
   std::cout << s1.toString();
-  std::cout << s4.toString();
+  std::cout << movedStudent.toString();
 
   delete s3;
   return 0;
