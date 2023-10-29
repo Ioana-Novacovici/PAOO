@@ -1,8 +1,9 @@
-#include <cmath>
 #include <iostream>
 #include <string>
 #include "TutorialConfig.h"
 #include "MathFunctions.h"
+
+using namespace mathfunctions;
 
 int main(int argc, char* argv[])
 {
@@ -16,7 +17,7 @@ int main(int argc, char* argv[])
 
   const double inputValue = std::stod(argv[1]);
   // calculate square root
-  const double outputValue = mathfunctions::sqrt(inputValue);
+  const double outputValue = sqrt(inputValue);
   std::cout << "The square root of " << inputValue << " is " << outputValue
             << std::endl;
   return 0;
