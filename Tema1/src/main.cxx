@@ -1,17 +1,27 @@
 #include <iostream>
 #include <student.h>
+#include <vector>
 
 using namespace std;
 
 int main(int argc, char* argv[]){
-    Student s1(12485, "Maria", "Popescu", 1);
-    std::cout << s1.toString();
-    Student s2 = s1;
-    std::cout << s2.toString();
-    s1.setYearOfStudy(7);
-    s1.setName("Ioana");
-    std::cout << s1.toString();
-    std::cout << s2.toString();
-    std::cout << "Hello woooorld" << std::endl;
+
+  Student s1(12485, "Ioana", "Novacovici", 4);
+  Student s2 = s1;
+  s2.setStudentID(12486);
+  s2.setFirstName("Sonia");
+  std::cout << s1.toString();
+  std::cout << s2.toString();
+
+
+  Student* s3;
+  s3 = new Student(12490, "Andrei", "Marinescu", 1);
+  std::cout << s3->toString();
+
+  Student s4(std::move(s1));
+  std::cout << s1.toString();
+  std::cout << s4.toString();
+
+  delete s3;
   return 0;
 }

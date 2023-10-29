@@ -11,9 +11,18 @@ private:
 
 public:
     Student(int studentID, const char* firstName, const char* lastName, int yearOfStudy);
+    
+    Student();
+    
     ~Student();
+    
     Student(const Student& student);
-    std::string toString();
-    void setYearOfStudy(int year);
-    void setName(const char* name);
+   
+    Student(Student&& student);
+    
+    std::string toString() const;
+    
+    void setStudentID(int id);
+
+    void setFirstName(const char* name);
 };
