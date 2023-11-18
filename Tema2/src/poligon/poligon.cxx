@@ -23,7 +23,7 @@ Poligon::Poligon(const Poligon& poligon)
 
     name = new char[strlen(poligon.name) + 1];
     std::strcpy(this->name, poligon.name);
-    std::cout << "Copy constructor called for: " <<name << "!" << std::endl;
+    std::cout << "Copy constructor called for: " << name << "!" << std::endl;
 }
 
 Poligon::Poligon(Poligon&& poligon)
@@ -36,14 +36,14 @@ Poligon::Poligon(Poligon&& poligon)
 }
 
 void Poligon::draw() const {
-    std::cout << "I am drawing a poligon!" << std::endl;
+    std::cout << "I am drawing a poligon: " << name << std::endl;
 }
     
 double Poligon::computeArea() const {
     return height * width;
  }
 
-void Poligon::setName(char *newName) {
+void Poligon::setName(const char *newName) {
      delete[] name;  
     name = new char[strlen(newName) + 1];
     std::strcpy(name, newName);
@@ -57,7 +57,7 @@ Poligon& Poligon::operator= (const Poligon &other) {
     width = other.width;
     height= other.height;
 
-    std::cout << "Coppy assignment operator overload";
+    std::cout << "Coppy assignment operator called for: " << name << std::endl;
     return *this; 
 }
 
@@ -70,7 +70,7 @@ Poligon& Poligon::operator= (Poligon &&other) {
     other.height = -1;
     other.name = nullptr;
 
-    std::cout << "Move assignment operator overload";
+    std::cout << "Move assignment operator called for: " << name << std::endl;
     return *this;
 }
 

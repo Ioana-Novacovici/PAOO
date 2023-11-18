@@ -2,7 +2,7 @@
 #include "shape.h"
 
 class Poligon : public Shape {
-private:
+protected:
     char* name;
     int height;
     int width;
@@ -22,7 +22,7 @@ public:
     
     virtual double computeArea() const override;
 
-    virtual void setName(char *newName) override;
+    virtual void setName(const char *newName) override;
 
     Poligon& operator=(const Poligon &other);
 
