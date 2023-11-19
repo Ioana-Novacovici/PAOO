@@ -27,7 +27,7 @@ int main(int argc, char* argv[]){
    Shape* specialshape = new Triangle("triangle MNP", 2, 3);
    std::cout << "Area of triangle is: " << specialshape->computeArea() << std::endl;
    specialshape->draw();
-    
+  
    delete specialshape;
    Shape* s = new Circle("small circle", 2);
    s->draw();

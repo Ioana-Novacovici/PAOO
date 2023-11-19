@@ -17,7 +17,6 @@ target_link_libraries(ShapeProject PUBLIC shape_lib poligon_lib circle_lib trian
 
 target_include_directories(ShapeProject PUBLIC
                            "${PROJECT_BINARY_DIR}"
-                           "${PROJECT_SOURCE_DIR}/shape"
                            "${PROJECT_SOURCE_DIR}/poligon"
                            "${PROJECT_SOURCE_DIR}/circle"
                            "${PROJECT_SOURCE_DIR}/triangle"
