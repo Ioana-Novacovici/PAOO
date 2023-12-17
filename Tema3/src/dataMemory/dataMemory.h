@@ -1,5 +1,5 @@
 #pragma once
-#define MEMORY_SIZE 32
+#define MEMORY_SIZE 16
 #include <mutex>
 
 class Memory {
@@ -11,12 +11,11 @@ public:
 
     ~Memory();
 
-    Memory(const Memory& memory);
-
     void writeTo(int address, int data);
     
     int readFrom(int address);
 
     void print();
 
+    void computeSum(int startAddress, int endAddress);
 };
