@@ -1,0 +1,1 @@
+add_library(memory_lib STATIC dataMemory.cxx)
