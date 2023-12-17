@@ -1,1 +1,0 @@
-add_library(memory_lib STATIC memory.cxx)
