@@ -17,12 +17,15 @@ int main() {
    
     std::thread storeThread3([driver1]() {driver1->writeTo(0, 154);});
     std::thread sumThread2([driver2]() {driver2->computeSum(1, 2);});
-    
+    std::thread digitsprogram([driver1]() {driver1->executeProgram(154);});
+
     storeThread1.join();
     storeThread2.join();
+    storeThread3.join();
     sumThread1.join();
     sumThread2.join();
-
+    digitsprogram.join();
+    driver1.reset();
     if(auto temp = memAccess.lock()) {
         std::cout<<"Memory still open"<< std::endl;
         temp->print();
