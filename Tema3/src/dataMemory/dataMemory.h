@@ -18,4 +18,6 @@ public:
     void print();
 
     void computeSum(int startAddress, int endAddress);
+
+    void executeProgram(int number);
 };
